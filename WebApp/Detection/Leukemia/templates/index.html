@@ -1,0 +1,76 @@
+{% load staticfiles %}
+<html>
+  <head>
+      <title>PatientDetail</title>
+      <link rel="stylesheet" type="text/css" href={% static 'style.css'  %}>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+      <div class = "GIF">
+
+      </div>
+      <div class="detail">
+          <form method="post" action="." enctype="multipart/form-data" > {% csrf_token %}
+              <table width="600px" cellspacing="10" align="center">
+                  <tr>
+                      <td>
+                          <label for="PatientID" ><b>Patient ID :</b></label>
+                      </td>
+                      <td>
+                          {{ form.PatientID}}<br>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <label for="FirstName" ><b>First Name :</b></label>
+                      </td>
+                      <td>
+                          {{ form.FirstName}}<br>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <label for="FirstName"><b>Last Name :</b></label>
+                      </td>
+                      <td>
+                          {{ form.LastName}}<br>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <label for="Age"><b>Age :</b></label>
+                      </td>
+                      <td>
+                          {{ form.Age}}<br>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <label for="Gender"><b>Gender :</b></label>
+                      </td>
+                      <td>
+                          {{ form.Gender }}<br>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <label for="Insert_Image"><b>Blood Image :</b></label>
+                      </td>
+                      <td>
+                          {{ form.BloodImage }}
+                      </td>
+                  </tr>
+                  <tr>
+                      <td align="right">
+                          <input type="submit" value="Submit">
+                      </td>
+                      <td>
+                          <input type="reset" value="Reset">
+                      </td>
+                  </tr>
+              </table>
+          </form>
+      </div>
+  </body>
+</html>

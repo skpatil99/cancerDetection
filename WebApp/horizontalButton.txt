@@ -1,0 +1,19 @@
+<ul>
+          <form method="post" action="." enctype="multipart/form-data" > {% csrf_token %}
+            <input type="submit" value="FNN">
+          </form>
+          <form method="post" action="." enctype="multipart/form-data" > {% csrf_token %}
+            <input type="submit" value="CNN">
+          </form>
+          <form method="post" action="." enctype="multipart/form-data" > {% csrf_token %}
+            <input type="submit" value="KNN">
+          </form>
+          <form method="post" action="." enctype="multipart/form-data" > {% csrf_token %}
+            <input type="submit" value="SVM">
+          </form>
+      </ul>
+
+      <li><a href="#">FNN</a></li>
+      <li><a href="#">CNN</a></li>
+      <li><a href="#">SVM</a></li>
+      <li><a href="#">KNN</a></li>

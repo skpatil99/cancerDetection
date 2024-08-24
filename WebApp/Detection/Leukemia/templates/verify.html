@@ -1,0 +1,93 @@
+{% load staticfiles %}
+<html>
+  <head>
+      <title>Report</title>
+      <link rel="stylesheet" type="text/css" href={% static 'styleverify.css' %}>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <style>
+            body{
+              background-size: auto ;
+              background-position: center;
+            }
+
+            .h1{
+              background-color: white;
+              font-size: 200%;
+              color: orange;
+
+            }
+            .detail{
+               font-size: 130%;
+            }
+            table{
+              font-size: 110%;
+            }
+
+      </style>
+  </head>
+  <body>
+      <h1 class="h1">ALL Report</h1>
+
+
+      <div class="detail">
+          <div align="center">
+              <table width="400px" cellspacing="10" align="center">
+                  <tr>
+                      <td>
+                          <strong><label for="Name">Last Name :</label></strong>
+                      </td>
+                      <td>
+                          {{ Latest_Entry.LastName }}
+                          <br>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <strong><label for="Name">First Name :</label></strong>
+                      </td>
+                      <td>
+                          {{ Latest_Entry.FirstName }}
+
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <strong><label for="Age">Age :</label></strong>
+                      </td>
+                      <td>
+                          {{ Latest_Entry.Age }}
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <strong><label for="Gender">Gender :</label></strong>
+                      </td>
+                      <td>
+                          {{ Latest_Entry.Gender }}
+                      </td>
+                  </tr>
+              </table><br><br>
+
+              <strong>FNN Result : </strong> {{ result_FNN }} <br><br>
+              <strong>KNN Result : </strong> {{ result_KNN }} <br><br>
+              <strong>SVM Result : </strong> {{ result_SVM }} <br><br>
+              <strong>CNN Result : </strong> {{ result_CNN }} <br><br><br><br>
+
+              <form method="post" action="index.html">{% csrf_token %}
+                  <input type="submit" value="Go HomePage">
+              </form>
+          </div>
+
+      </div>
+      <!--
+      <div class="sidenav">
+      </div>
+-->
+      <br>
+      <!--
+      <div class="sidenavright">
+      </div>
+    -->
+  </body>
+</html>
